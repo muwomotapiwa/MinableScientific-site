@@ -151,11 +151,25 @@ iframe {
     border-radius: 10px;
 }
 
-/* Footer */
-footer {
-    background: #1a2132;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
+/* Footer Information Section */
+.footer-info {
+    font-size: 16px;
+    line-height: 1.8; /* Improves readability with spacing */
+    color: #ddd; /* Light grey color for text */
+    margin-top: 20px; /* Adds space above the footer info */
+    text-align: center; /* Centers all text */
+    font-family: Arial, sans-serif;
 }
+
+.footer-info a {
+    color: #01aaff; /* Highlight color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #00d4ff; /* Light hover effect color */
+}
+
