@@ -12,10 +12,10 @@ html, body {
     color: #333;
 }
 
+/* Header */
 header {
     background: linear-gradient(90deg, #1a2132, #2b3344);
     padding: 20px 0;
-    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,15 +25,13 @@ header .container {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 header h1 {
     color: #fff;
-    font-size: 24px;
-    font-weight: bold;
 }
 
+/* Navigation Links */
 nav ul {
     list-style: none;
     display: flex;
@@ -45,27 +43,27 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    position: relative;
+    position: relative; /* Required for the ::after pseudo-element */
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #01aaff;
+nav ul li a::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    bottom: -4px; /* Space between text and underline */
+    left: 0;
+    width: 0; /* Initially hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: #01aaff; /* Underline color */
+    transition: width 0.3s ease; /* Smooth width expansion */
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background: #01aaff;
-    transition: width 0.3s ease;
+nav ul li a:hover {
+    color: #01aaff; /* Text color change on hover */
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%; /* Underline expands to full width */
 }
 
 /* Hero Section */
@@ -77,32 +75,169 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
 }
 
 .hero-overlay {
+    background: rgba(26, 33, 50, 0.8);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 33, 50, 0.8);
 }
 
 .hero-content {
     position: relative;
+    z-index: 1;
     text-align: center;
 }
 
-/* Content and Values Section */
-.content-section, .values-section {
-    text-align: center;
-    padding: 40px 20px;
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-    background: #1a2132;
-    color: white;
+.hero p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Content Section */
+.content-section {
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 20px;
     text-align: center;
+}
+
+.content-section h3 {
+    font-size: 36px;
+    color: #1a2132;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Meet Our Team Section */
+.image-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-row img {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.large-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.large-image-description {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Core Values Section */
+.values-footer-section {
+    background-color: #1a2132;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.values-footer-section h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background-color: #2b3344;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.value-card:hover {
+    transform: scale(1.05);
+}
+
+.value-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #01aaff;
+}
+
+.value-card p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Footer Info Section */
+.footer-info {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #ddd;
+}
+
+.footer-info a {
+    color: #01aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #00d4ff;
 }
