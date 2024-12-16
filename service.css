@@ -180,6 +180,7 @@ footer {
     color: #ddd; /* Light grey text color */
     text-align: center; /* Center the footer content */
     font-family: Arial, sans-serif;
+    margin-top: 80px;
 }
 
 .footer-info {
