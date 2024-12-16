@@ -136,12 +136,12 @@ nav ul li a:hover::after {
 
 .image-row {
     display: flex;
-    gap: 20px;
+    gap: 96px;
     justify-content: center;
 }
 
 .image-row img {
-    width: 350px;
+    width: 360px;
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
@@ -155,7 +155,7 @@ nav ul li a:hover::after {
 }
 
 .large-image {
-    width: 100%;
+    width: 71%;
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
