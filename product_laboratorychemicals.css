@@ -187,9 +187,29 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background: #1a2132;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
+    background: #1a2132; /* Solid dark background */
+    padding: 20px 10px; /* Add padding for spacing */
+    color: #ddd; /* Light grey text color */
+    text-align: center; /* Center the footer content */
+    font-family: Arial, sans-serif;
 }
+
+.footer-info {
+    font-size: 16px;
+    line-height: 1.8; /* Adds spacing between lines */
+    margin: 0 auto; /* Centers the text horizontally */
+    max-width: 800px; /* Restricts the width for better readability */
+}
+
+.footer-info a {
+    color: #01aaff; /* Highlight color for links */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes links bold */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d4ff; /* Lighter blue hover effect */
+}
+
