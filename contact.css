@@ -144,14 +144,14 @@ nav ul li a:hover::after {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    font-size: 9px; /* Smaller font size */
-    color: white; /* Default text color */
-    font-weight: 300; /* Thin font weight */
+    font-size: 10px; /* Smaller font size */
+    color: #9b9ba2; /* Default text color */
+    font-weight: 200; /* Thin font weight */
     font-family: Arial, sans-serif;
 }
 
 .credit a {
-    color: white; /* Default link color */
+    color: #9b9ba2; /* Default link color */
     text-decoration: none; /* No underline initially */
     transition: color 0.3s ease; /* Smooth hover transition */
 }
