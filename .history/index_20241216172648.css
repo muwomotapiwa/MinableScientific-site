@@ -166,16 +166,13 @@ nav ul li a:hover::after {
 }
 
 .credit a {
-    color: white; /* Default color */
-    text-decoration: none; /* No underline initially */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    color: white;
+    text-decoration: none;
 }
 
 .credit a:hover {
-    color: #01aaff; /* Change to #01aaff on hover */
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
 }
-
 
 /* Animations */
 @keyframes fadeIn {
