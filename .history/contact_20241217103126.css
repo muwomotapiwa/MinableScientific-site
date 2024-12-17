@@ -161,6 +161,7 @@ nav ul li a:hover::after {
     text-decoration: underline; /* Underline on hover */
 }
 
+
 .map-section {
     margin: 20px auto;
     text-align: center;
